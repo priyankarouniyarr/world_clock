@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
 class Brain {
@@ -13,7 +14,8 @@ class Brain {
         data = jsonDecode(response.body);
 
       }else {
-        print(response.statusCode);
+        Fluttertoast.showToast(msg: jsonDecode(response.body));
+
       }
     } catch (e) {
         print(e);

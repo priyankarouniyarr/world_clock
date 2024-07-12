@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Center(
                     child: Text('+ Add Place',
-                        style: kstyle2.copyWith(fontSize: 15))))),
+                        style: kstyle2.copyWith(fontSize:20))))),
         body: ListView(
           //changed column to listview
           // crossAxisAlignment: CrossAxisAlignment.stretch,
