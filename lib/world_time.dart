@@ -34,14 +34,14 @@ class _containerState extends State<container> {
     final response = await brain.getData(widget.timeZoneName);
     //  print(response);
     var localDateTime = response["currentLocalTime"];
-    
+
     DateTime dataTime = DateTime.parse(localDateTime);
     String formattedDate = DateFormat("hh:mm aa").format(dataTime);
     time = formattedDate;
     setState(() {});
     if(response == null) return;
 
-   
+
   }
 
   @override
@@ -58,16 +58,19 @@ class _containerState extends State<container> {
           children: [
             Icon(Icons.location_on, color: Colors.white),
             SizedBox(width: 15),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.timeZoneName,
-                  style: kstyle1,
-                ),
-                Text(widget.country, style: kstyle2),
-              ],
+            Flexible(
+              child: Column(
+              
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.timeZoneName,
+                    style: kstyle1,
+                  ),
+                  Text(widget.country, style: kstyle2),
+                ],
+              ),
             ),
             Spacer(),
             Text("$time", style: kstyle1),
