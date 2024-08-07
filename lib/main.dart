@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:world_clock/splashscreen.dart';
 
 import 'homepage.dart';
 
@@ -17,10 +18,10 @@ class MyApp extends StatelessWidget {
       title: 'World_Clock',
       theme: ThemeData(
        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      
         useMaterial3: true,
       ),
-      home:  MyHomePage(),
+      home:  SplashScreen(),
     );
   }
 }
